@@ -1,0 +1,7 @@
+{
+  "name": "Tuts Tax",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular"
+}
