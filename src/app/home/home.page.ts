@@ -1,4 +1,6 @@
 import { Component, ElementRef, OnInit, ViewChild } from '@angular/core';
+import { ModalController } from '@ionic/angular';
+import { ModalLocationsComponent } from '../components/modals/modal-locations/modal-locations.component';
 
 declare const google: any;
 
@@ -19,10 +21,23 @@ export class HomePage implements OnInit {
 
   private geocoder = new google.maps.Geocoder();
 
-  constructor() { }
+  constructor(
+    private modalCtrl: ModalController
+  ) { }
 
   ngOnInit() {
     this.initMap();
+  }
+
+  public async locations() {
+
+    const modal = await this.modalCtrl.create({
+      component: ModalLocationsComponent,
+      backdropDismiss: false
+    });
+
+    return await modal.present();
+
   }
 
   private geocodeLatLng(latLng: any) {
