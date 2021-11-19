@@ -4,7 +4,7 @@
 
     <ion-buttons>
 
-      <ion-button>
+      <ion-button (click)="dismiss()">
 
         <ion-icon name="arrow-back-outline"></ion-icon>
 
@@ -16,13 +16,13 @@
 
   <ion-toolbar class="addresses">
 
-    <ion-searchbar searchIcon="ellipse-outline" placeholder="Insira o local de partida"></ion-searchbar>
+    <ion-searchbar class="address" searchIcon="ellipse" placeholder="Insira o local de partida"></ion-searchbar>
 
-    <ion-searchbar searchIcon="square-outline" placeholder="Para onde?"></ion-searchbar>
+    <ion-searchbar class="address" searchIcon="square" placeholder="Para onde?"></ion-searchbar>
 
     <ion-buttons slot="end">
 
-      <ion-fab-button size="small">
+      <ion-fab-button>
 
         <ion-icon name="add"></ion-icon>
 

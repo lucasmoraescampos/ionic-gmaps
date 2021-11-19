@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { ModalController } from '@ionic/angular';
 
 @Component({
   selector: 'app-modal-locations',
@@ -7,8 +8,14 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ModalLocationsComponent implements OnInit {
 
-  constructor() { }
+  constructor(
+    private modalCtrl: ModalController
+  ) { }
 
   ngOnInit() {}
+
+  public dismiss() {
+    this.modalCtrl.dismiss();
+  }
 
 }

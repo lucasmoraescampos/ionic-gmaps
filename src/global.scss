@@ -24,3 +24,13 @@
 @import "~@ionic/angular/css/text-alignment.css";
 @import "~@ionic/angular/css/text-transformation.css";
 @import "~@ionic/angular/css/flex-utils.css";
+
+ion-searchbar.address {
+    .searchbar-input-container {
+        height: 46px;
+
+        ion-icon.searchbar-search-icon {
+            transform: scale(0.4);
+        }
+    }    
+}

@@ -5,12 +5,21 @@ ion-toolbar {
 
         ion-searchbar {
             --border-radius: 0;
-            height: 46px;
+            height: 56px;
             padding: 0;
         }
 
         ion-buttons {
-            margin: auto;
+            margin: auto 10px;
+
+            ion-fab-button {
+                width: 35px;
+                height: 35px;
+
+                ion-icon {
+                    font-size: 24.5px;
+                }
+            }
         }
     }
 }
