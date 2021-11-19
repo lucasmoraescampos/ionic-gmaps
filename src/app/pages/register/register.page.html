@@ -1,38 +1,44 @@
-<ion-content color="dark">
+<ion-content color="dark" #content>
 
-  <div class="chat-left top">
+  <div class="chat">
 
-    <span>Olá! 😊</span>
+    <div [class]="msg.class" *ngFor="let msg of messages">{{ msg.text }}</div>
+
+    <!-- <div class="chat-left">
+
+      <span>Que bom ver você aqui!</span>
+
+    </div>
+
+    <div class="chat-left">
+
+      <span>Sua conta será atrelada ao seu CPF.</span>
+
+    </div>
+
+    <div class="chat-left">
+
+      <span>Por isso, digite o número do seu CPF.</span>
+
+    </div>
+
+    <div class="chat-right top">
+
+      <span>051.507.811-50</span>
+
+    </div>
+
+    <div class="chat-left top">
+
+      <span>Como gostaria de ser chamado? Pode ser pelo seu nome ou apelido.</span>
+
+    </div> -->
 
   </div>
 
-  <div class="chat-left">
+  <div [class]="typingClass" *ngIf="typing">
 
-    <span>Que bom ver você aqui!</span>
-
-  </div>
-
-  <div class="chat-left">
-
-    <span>Sua conta será atrelada ao seu CPF.</span>
-
-  </div>
-
-  <div class="chat-left">
-
-    <span>Por isso, digite o número do seu CPF.</span>
-
-  </div>
-
-  <div class="chat-right top">
-
-    <span>051.507.811-50</span>
-
-  </div>
-
-  <div class="chat-left top">
-
-    <span>Como gostaria de ser chamado? Pode ser pelo seu nome ou apelido.</span>
+    <ion-spinner name="dots"></ion-spinner>
 
   </div>
 
